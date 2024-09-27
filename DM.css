@@ -1,0 +1,113 @@
+body {
+    font-family: 'Georgia', serif; 
+    margin: 0;
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Times New Roman', serif;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Georgia', serif;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Centrer les images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les images */
+}
+
+/* Assurer que les images ont les mêmes dimensions */
+.image-container img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.image-container img:not(:hover) {
+    filter: blur(4px);
+    opacity: 0.7;
+}
+
+.image-container:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+/* Style du footer */
+footer {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    opacity: 0.7;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: whitesmoke;
+}
